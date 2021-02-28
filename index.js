@@ -80,6 +80,6 @@ let allWagesFor = function () {
 
 const calculatePayroll = function(record){
     return record.reduce(function(memo, rec){
-        return memo + allWagesFor.call(rec)
+        return memo + allWagesFor.apply(rec)
     }, 0)
 }
